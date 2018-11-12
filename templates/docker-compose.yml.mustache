@@ -1,0 +1,10 @@
+version: '3'
+services:
+  server:
+    build: .
+    environment:
+      JAVA_OPTS: "-agentlib:jdwp=transport=dt_socket,address=5005,server=y,suspend=n"
+    image: {{application.name}}
+    ports:
+      - "{{application.port}}:{{application.port}}"
+      - "5005:5005"
