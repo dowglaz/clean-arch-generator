@@ -16,7 +16,7 @@ const compile = async () => (
 
 exports.compile = compile;
 
-const everything = `${configs.application.src}/*`;
+const everything = `${configs.application.src}/**/*`;
 const copy = async () => ( gulp.src([everything, `!${processables}`]).pipe(gulp.dest(configs.application.dist)) );
 
 exports.clean = async () => ( gulp.src(configs.application.dist, {read: false}).pipe(clean()) );
