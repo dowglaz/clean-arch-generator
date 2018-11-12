@@ -1,9 +1,13 @@
 plugins {
-    id 'java-library'
+    id 'java'
 }
 
 repositories {
     jcenter()
+}
+
+ext {
+    springBootVersion = '2.0.4.RELEASE'
 }
 
 dependencies {
@@ -11,5 +15,7 @@ dependencies {
     compile project(":dataproviders:dataprovider")
     compile 'org.springframework.boot:spring-boot:2.0.4.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-web:2.0.4.RELEASE'
+    testImplementation "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
+    runtime "org.springframework.boot:spring-boot-devtools:${springBootVersion}"
     testImplementation 'junit:junit:4.12'
 }
