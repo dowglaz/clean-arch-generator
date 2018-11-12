@@ -1,0 +1,23 @@
+{
+  "name": "clean-arch-generator",
+  "version": "1.0.0",
+  "description": "A generator for clean architecture projects.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "clean",
+    "architecture",
+    "java",
+    "generator"
+  ],
+  "author": "Douglas M C P Melo",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-mustache": "^4.1.0",
+    "gulp-rename": "^1.4.0"
+  }
+}

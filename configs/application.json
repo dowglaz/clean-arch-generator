@@ -1,0 +1,6 @@
+{
+  "name": "java-clean-arch-template",
+  "src": "./templates",
+  "processables": "**/*.mustache",
+  "dist": "./dist"
+}
