@@ -1,5 +1,6 @@
 {
   "name": "java-clean-arch-template",
+  "port": "8080",
   "src": "./templates",
   "processables": "**/*.mustache",
   "dist": "./dist"

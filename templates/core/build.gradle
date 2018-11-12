@@ -1,0 +1,15 @@
+plugins {
+    id: 'java-library'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.projectlombok:lombok:1.18.2'
+    compile 'org.springframework:spring-beans:5.0.8.RELEASE'
+    compile 'org.springframework:spring-context-support:5.0.8.RELEASE'
+    testImplementation 'junit:junit:4.12'
+}
+
