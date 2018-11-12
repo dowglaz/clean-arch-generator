@@ -1,26 +1,26 @@
 plugins {
-	id: 'java'
-	id: 'com.github.johnrengelman.shadow'
+    id 'java'
+    id 'com.github.johnrengelman.shadow'
 }
 
 task docker(type: Exec) {
-	dependsOn 'clean'
-	dependsOn 'build'
-	dependsOn 'shadowJar'
-	println 'Generating Docker image...'
-	commandLine 'docker-compose', 'build'
+    dependsOn 'clean'
+    dependsOn 'build'
+    dependsOn 'shadowJar'
+    println 'Generating Docker image...'
+    commandLine 'docker-compose', 'build'
 }
 
 task run(type: Exec) {
-	dependsOn 'docker'
-	println 'Running Docker image...'
-	commandLine 'docker-compose', 'up'
+    dependsOn 'docker'
+    println 'Running Docker image...'
+    commandLine 'docker-compose', 'up'
 }
 
 jar {
-	manifest {
-		attributes("Main-Class": "com.example.Application")
-	}
+    manifest {
+         attributes("Main-Class": "com.example.Application")
+    }
 }
 
 repositories {
@@ -28,16 +28,16 @@ repositories {
 }
 
 buildscript {
-	repositories {
-		jcenter()
-	}
+    repositories {
+	jcenter()
+    }
 
-	dependencies {
-		classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.4'
-	}
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.4'
+    }
 }
 
 dependencies {
-	compile project("entrypoints:entrypoint")
+    compile project("entrypoints:entrypoint")
     testCompile 'junit:junit:4.12'
 }
